@@ -15,7 +15,11 @@ def get_info():
     current_day = datetime.datetime.utcnow().strftime('%A')
     
     #Get the current UTC time with validation of +/-2 minutes
-    utc_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    current_utc_time = datetime.datetime.utcnow()
+    if abs(current_utc_time.second - 0) <= 2:
+        utc_time = current_utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+    else:
+        utc_time = "Validation Error: UTC time not within +/-2 minutes of 0 seconds."
     
     # GitHub URLs
     github_file_url = "https://github.com/Clever4Sure/hng_stage_one.task/blob/main/stange_one.py"
@@ -33,5 +37,5 @@ def get_info():
     
     return jsonify(response)
 
-__name__ == '__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

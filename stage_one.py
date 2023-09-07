@@ -18,7 +18,7 @@ def get_info():
     utc_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     
     # GitHub URLs
-    github_file_url = " "
+    github_file_url = "https://github.com/Clever4Sure/hng_stage_one.task/blob/main/stange_one.py"
     github_repo_url = "https://github.com/Clever4Sure/hng_stage_one.task.git"
     
     # Create the JSON response

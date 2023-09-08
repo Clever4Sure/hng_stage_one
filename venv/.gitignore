@@ -1,0 +1,19 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Environment files
+.flaskenv
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# OS-specific files
+.DS_Store

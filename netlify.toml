@@ -1,0 +1,7 @@
+[build]
+functions = "netlify-functions"
+publish = "public"  # The directory where your static files are stored
+
+[dev]
+framework = "# Not Required for Production"
+
